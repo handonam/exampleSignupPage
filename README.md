@@ -12,4 +12,9 @@ yarn install
 yarn start
 ```
 
+To Test (Which I almost ran out of time to do with 2 minutes to spare!)
+```
+yarn test
+```
+
 Enjoy!
