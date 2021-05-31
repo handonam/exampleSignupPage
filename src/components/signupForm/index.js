@@ -63,12 +63,13 @@ const SignupForm = () => {
           className="SignupForm__Input"
           type="text"
           id="firstName"
+          data-testid="firstName"
           name="firstName"
           value={values.firstName || ""}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
         />
-        <span className="SignupForm__ErrorMsg">{errors.firstName}</span>
+        <span className="SignupForm__ErrorMsg" data-testid='error__firstName'>{errors.firstName}</span>
       </div>
       <label
         htmlFor="lastName"
@@ -85,12 +86,13 @@ const SignupForm = () => {
           }`}
           type="text"
           id="lastName"
+          data-testid="lastName"
           name="lastName"
           value={values.lastName || ""}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
         />
-        <span className="SignupForm__ErrorMsg">{errors.lastName}</span>
+        <span className="SignupForm__ErrorMsg" data-testid='error__lastName'>{errors.lastName}</span>
       </div>
       <label
         htmlFor="phoneNumber"
@@ -107,12 +109,13 @@ const SignupForm = () => {
           }`}
           type="text"
           id="phoneNumber"
+          data-testid="phoneNumber"
           name="phoneNumber"
           value={values.phoneNumber || ""}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
         />
-        <span className="SignupForm__ErrorMsg">{errors.phoneNumber}</span>
+        <span className="SignupForm__ErrorMsg" data-testid='error__phoneNumber'>{errors.phoneNumber}</span>
       </div>
       <label
         htmlFor="email"
@@ -129,12 +132,13 @@ const SignupForm = () => {
           }`}
           type="email"
           id="email"
+          data-testid="email"
           name="email"
           value={values.email || ""}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
         />
-        <span className="SignupForm__ErrorMsg">{errors.email}</span>
+        <span className="SignupForm__ErrorMsg" data-testid='error__email'>{errors.email}</span>
       </div>
       <label
         htmlFor="password"
@@ -149,12 +153,13 @@ const SignupForm = () => {
           className="SignupForm__Input"
           type="password"
           id="password"
+          data-testid="password"
           name="password"
           value={values.password || ""}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
         />
-        <span className="SignupForm__ErrorMsg">{errors.password}</span>
+        <span className="SignupForm__ErrorMsg" data-testid='error__password'>{errors.password}</span>
       </div>
       <label
         htmlFor="confirmPassword"
@@ -169,12 +174,13 @@ const SignupForm = () => {
           className="SignupForm__Input"
           type="password"
           id="confirmPassword"
+          data-testid="confirmPassword"
           name="confirmPassword"
           value={values.confirmPassword || ""}
           onChange={handleInputChange}
           onBlur={handleInputBlur}
         />
-        <span className="SignupForm__ErrorMsg">{errors.confirmPassword}</span>
+        <span className="SignupForm__ErrorMsg" data-testid='error__confirmPassword'>{errors.confirmPassword}</span>
       </div>
 
       <div className="SignupForm__Actions">
