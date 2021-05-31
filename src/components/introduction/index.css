@@ -1,0 +1,11 @@
+.Introductions {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.Introductions__Greetings {
+  font-weight: bold;
+}
+.Introductions__Blurb {
+  width: 90%;
+  margin: auto;
+}

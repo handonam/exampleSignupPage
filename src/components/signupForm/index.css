@@ -1,0 +1,132 @@
+.SignupForm {
+  background-color: #e8e8ec;
+  padding: 1rem;
+  margin: auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12); /* yea, i know right? */
+  border-radius: 1rem;
+  color: #21292c;
+}
+
+/**
+ * Labels
+ **/
+.SignupForm__Label {
+  display: block;
+  width: 100%;
+  padding: 0.25rem;
+  transition: color 0.25s ease-out;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.SignupForm__Label--Success {
+  color: #3ca369;
+}
+.SignupForm__Label--Error {
+  color: #f44336;
+}
+
+/**
+ * Input Sets
+ **/
+.SignupForm__InputErrorSet {
+  display: flex;
+}
+
+.SignupForm__Input {
+  display: block;
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #666666;
+  outline: none;
+  padding: 0.5rem;
+  padding-left: 0.25rem;
+  transition: border 0.5s ease-out;
+}
+.SignupForm__Input--Success {
+  border-bottom: 1px solid #3ca369;
+}
+.SignupForm__Input--Error {
+  border-bottom: 1px solid #f44336;
+}
+
+/**
+ * Error Messages
+ **/
+.SignupForm__ErrorMsg {
+  color: #f44336;
+  font-size: 0.75rem;
+  width: 100%;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+/**
+ * Actions and Buttons
+ **/
+.SignupForm__Actions {
+  padding: 1rem 0;
+  display: flex;
+}
+
+.SignupForm__Button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  color: #21292c;
+  background-color: e8e8ec;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12); /* yea, i know right? */
+  margin-right: 0.25rem;
+}
+
+.SignupForm__Button--Primary {
+  background-color: #1888a4;
+  color: #e8e8ec;
+}
+
+/**
+ * Success Message
+ **/
+.SignupForm__SuccessSubmitMsg {
+  font-weight: bold;
+}
+
+/**
+ * Media Queries!
+ **/
+@media only screen and (max-width: 480px) {
+  .SignupForm {
+    width: 90%;
+  }
+
+  .SignupForm__InputErrorSet {
+    flex-direction: column;
+  }
+
+  .SignupForm__ErrorMsg {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .SignupForm {
+    width: 90%;
+  }
+  .SignupForm__Input {
+    flex: 1 1 400px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .SignupForm {
+    padding: 1rem 5rem;
+    width: 600px;
+  }
+  .SignupForm__Input {
+    flex: 1 1 400px;
+  }
+}
