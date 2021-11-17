@@ -7,7 +7,7 @@ import React from "react";
  *
  * Once done, when the form is ready to submit, then check against everything and get it sent!
  */
-const useForm = (success, validate, normalize) => {
+const useForm = (success, validate, normalize = () => {}) => {
   const [values, setValues] = React.useState({});
   const [errors, setErrors] = React.useState({});
   const [isDirty, setIsDirty] = React.useState({});
@@ -89,13 +89,21 @@ const useForm = (success, validate, normalize) => {
    */
   function handleFormSubmit(event) {
     event.preventDefault(); // Prevent the page from submitting, refreshing with new url params.
-    setErrors(validate(values));
-    setIsSubmitting(true);
+
+    const validations = validate(values);
+    setErrors(validations);
+
+    // Don't submit if we have errors
+    if (Object.keys(validations).length === 0) {
+      setIsSubmitting(true);
+    }
   }
 
   return {
     values,
+    setValues,
     errors,
+    setErrors,
     isDirty,
     isSubmitting,
     handleReset,
